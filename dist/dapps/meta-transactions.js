@@ -15,12 +15,12 @@ var MetaTransaction;
                 type: 'array',
                 items: [{ type: 'string' }, { type: 'string' }],
                 additionalItems: false,
-                minItems: 2
-            }
+                minItems: 2,
+            },
         },
         additionalProperties: false,
-        required: ['from', 'params']
+        required: ['from', 'params'],
     };
-    MetaTransaction.validate = (0, validation_1.generateValidator)(MetaTransaction.schema);
+    MetaTransaction.validate = validation_1.generateValidator(MetaTransaction.schema);
 })(MetaTransaction = exports.MetaTransaction || (exports.MetaTransaction = {}));
 //# sourceMappingURL=meta-transactions.js.map

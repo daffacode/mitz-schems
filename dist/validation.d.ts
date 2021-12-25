@@ -1,4 +1,4 @@
-import Ajv, { ErrorObject, JSONSchemaType } from 'ajv';
+import Ajv, { ErrorObject, JSONSchemaType } from "ajv";
 export { Ajv };
 /**
  * This type is a subset of AJV's ValidateFunction, it exists to make
@@ -32,5 +32,5 @@ export declare function generateValidator<T>(schema: JSONSchema<T>): ValidateFun
  * Validates a type with a schema in a functional way.
  * @public
  */
-export declare function validateType<T>(theType: Pick<AbstractTypedSchema<T>, 'validate'>, value: T): boolean;
+export declare function validateType<T>(theType: Pick<AbstractTypedSchema<T>, "validate">, value: T): boolean;
 //# sourceMappingURL=validation.d.ts.map

@@ -18,8 +18,8 @@ var Network;
 (function (Network) {
     Network.schema = {
         type: 'string',
-        enum: Object.values(Network)
+        enum: Object.values(Network),
     };
-    Network.validate = (0, validation_1.generateValidator)(Network.schema);
+    Network.validate = validation_1.generateValidator(Network.schema);
 })(Network = exports.Network || (exports.Network = {}));
 //# sourceMappingURL=network.js.map

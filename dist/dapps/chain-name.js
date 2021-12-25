@@ -9,14 +9,14 @@ const chain_id_1 = require("./chain-id");
  */
 var ChainName;
 (function (ChainName) {
-    ChainName["HARMONY_TESTNET"] = "Harmony Testnet";
-    ChainName["ETHEREUM_MAINNET"] = "Ethereum Mainnet";
-    ChainName["ETHEREUM_ROPSTEN"] = "Ropsten";
-    ChainName["ETHEREUM_RINKEBY"] = "Rinkeby";
-    ChainName["ETHEREUM_GOERLI"] = "Goerli";
-    ChainName["ETHEREUM_KOVAN"] = "Kovan";
-    ChainName["MATIC_MAINNET"] = "Polygon";
-    ChainName["MATIC_MUMBAI"] = "Mumbai";
+    ChainName["ETHEREUM_MAINNET"] = "MAINNET";
+    ChainName["HARMONY_TESTNET"] = "HARMONY";
+    ChainName["ETHEREUM_ROPSTEN"] = "ROPSTEN";
+    ChainName["ETHEREUM_RINKEBY"] = "RINKEBY";
+    ChainName["ETHEREUM_GOERLI"] = "GOERLI";
+    ChainName["ETHEREUM_KOVAN"] = "KOVAN";
+    ChainName["MATIC_MAINNET"] = "MATIC";
+    ChainName["MATIC_MUMBAI"] = "MUMBAI";
 })(ChainName = exports.ChainName || (exports.ChainName = {}));
 /**
  * Get chain id by chain name
@@ -51,8 +51,8 @@ exports.getChainId = getChainId;
 (function (ChainName) {
     ChainName.schema = {
         type: 'string',
-        enum: Object.values(ChainName)
+        enum: Object.values(ChainName),
     };
-    ChainName.validate = (0, validation_1.generateValidator)(ChainName.schema);
+    ChainName.validate = validation_1.generateValidator(ChainName.schema);
 })(ChainName = exports.ChainName || (exports.ChainName = {}));
 //# sourceMappingURL=chain-name.js.map

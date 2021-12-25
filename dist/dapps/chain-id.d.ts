@@ -20,11 +20,6 @@ export declare enum ChainId {
  */
 export declare function getChainName(chainId: ChainId): ChainName | null;
 /**
- * Get the chain name by chain id
- * @alpha
- */
-export declare function getURNProtocol(chainId: ChainId): string;
-/**
  * @alpha
  */
 export declare namespace ChainId {

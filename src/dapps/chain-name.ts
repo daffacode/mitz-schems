@@ -6,14 +6,14 @@ import { ChainId } from './chain-id'
  * @alpha
  */
 export enum ChainName {
-  HARMONY_TESTNET = 'Harmony Testnet',
-  ETHEREUM_MAINNET = 'Ethereum Mainnet',
-  ETHEREUM_ROPSTEN = 'Ropsten',
-  ETHEREUM_RINKEBY = 'Rinkeby',
-  ETHEREUM_GOERLI = 'Goerli',
-  ETHEREUM_KOVAN = 'Kovan',
-  MATIC_MAINNET = 'Polygon',
-  MATIC_MUMBAI = 'Mumbai'
+  ETHEREUM_MAINNET = 'MAINNET',
+  HARMONY_TESTNET = 'HARMONY',
+  ETHEREUM_ROPSTEN = 'ROPSTEN',
+  ETHEREUM_RINKEBY = 'RINKEBY',
+  ETHEREUM_GOERLI = 'GOERLI',
+  ETHEREUM_KOVAN = 'KOVAN',
+  MATIC_MAINNET = 'MATIC',
+  MATIC_MUMBAI = 'MUMBAI',
 }
 
 /**
@@ -25,7 +25,7 @@ export function getChainId(chainName: ChainName): ChainId | null {
     case ChainName.ETHEREUM_MAINNET:
       return ChainId.ETHEREUM_MAINNET
     case ChainName.HARMONY_TESTNET:
-      return ChainId.HARMONY_TESTNET
+        return ChainId.HARMONY_TESTNET
     case ChainName.ETHEREUM_ROPSTEN:
       return ChainId.ETHEREUM_ROPSTEN
     case ChainName.ETHEREUM_RINKEBY:
@@ -49,7 +49,7 @@ export function getChainId(chainName: ChainName): ChainId | null {
 export namespace ChainName {
   export const schema: JSONSchema<ChainName> = {
     type: 'string',
-    enum: Object.values(ChainName)
+    enum: Object.values(ChainName),
   }
 
   export const validate: ValidateFunction<ChainName> = generateValidator(schema)

@@ -14,7 +14,7 @@ export enum ChainId {
   ETHEREUM_GOERLI = 5,
   ETHEREUM_KOVAN = 42,
   MATIC_MAINNET = 137,
-  MATIC_MUMBAI = 80001
+  MATIC_MUMBAI = 80001,
 }
 
 /**
@@ -45,37 +45,12 @@ export function getChainName(chainId: ChainId): ChainName | null {
 }
 
 /**
- * Get the chain name by chain id
- * @alpha
- */
-export function getURNProtocol(chainId: ChainId): string {
-  switch (chainId) {
-    case ChainId.ETHEREUM_MAINNET:
-      return 'mainnet'
-    case ChainId.HARMONY_TESTNET:
-      return 'harmony'
-    case ChainId.ETHEREUM_ROPSTEN:
-      return 'ropsten'
-    case ChainId.ETHEREUM_RINKEBY:
-      return 'rinkeby'
-    case ChainId.ETHEREUM_GOERLI:
-      return 'goerli'
-    case ChainId.ETHEREUM_KOVAN:
-      return 'kovan'
-    case ChainId.MATIC_MAINNET:
-      return 'matic'
-    case ChainId.MATIC_MUMBAI:
-      return 'mumbai'
-  }
-}
-
-/**
  * @alpha
  */
 export namespace ChainId {
   export const schema: JSONSchema<ChainId> = {
     type: 'number',
-    enum: Object.values(ChainId)
+    enum: Object.values(ChainId),
   }
 
   export const validate: ValidateFunction<ChainId> = generateValidator(schema)

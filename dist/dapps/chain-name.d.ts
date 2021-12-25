@@ -5,14 +5,14 @@ import { ChainId } from './chain-id';
  * @alpha
  */
 export declare enum ChainName {
-    HARMONY_TESTNET = "Harmony Testnet",
-    ETHEREUM_MAINNET = "Ethereum Mainnet",
-    ETHEREUM_ROPSTEN = "Ropsten",
-    ETHEREUM_RINKEBY = "Rinkeby",
-    ETHEREUM_GOERLI = "Goerli",
-    ETHEREUM_KOVAN = "Kovan",
-    MATIC_MAINNET = "Polygon",
-    MATIC_MUMBAI = "Mumbai"
+    ETHEREUM_MAINNET = "MAINNET",
+    HARMONY_TESTNET = "HARMONY",
+    ETHEREUM_ROPSTEN = "ROPSTEN",
+    ETHEREUM_RINKEBY = "RINKEBY",
+    ETHEREUM_GOERLI = "GOERLI",
+    ETHEREUM_KOVAN = "KOVAN",
+    MATIC_MAINNET = "MATIC",
+    MATIC_MUMBAI = "MUMBAI"
 }
 /**
  * Get chain id by chain name

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getURNProtocol = exports.getChainName = exports.ChainId = void 0;
+exports.getChainName = exports.ChainId = void 0;
 const validation_1 = require("../validation");
 const chain_name_1 = require("./chain-name");
 /**
@@ -46,38 +46,13 @@ function getChainName(chainId) {
 }
 exports.getChainName = getChainName;
 /**
- * Get the chain name by chain id
- * @alpha
- */
-function getURNProtocol(chainId) {
-    switch (chainId) {
-        case ChainId.ETHEREUM_MAINNET:
-            return 'mainnet';
-        case ChainId.HARMONY_TESTNET:
-            return 'harmony';
-        case ChainId.ETHEREUM_ROPSTEN:
-            return 'ropsten';
-        case ChainId.ETHEREUM_RINKEBY:
-            return 'rinkeby';
-        case ChainId.ETHEREUM_GOERLI:
-            return 'goerli';
-        case ChainId.ETHEREUM_KOVAN:
-            return 'kovan';
-        case ChainId.MATIC_MAINNET:
-            return 'matic';
-        case ChainId.MATIC_MUMBAI:
-            return 'mumbai';
-    }
-}
-exports.getURNProtocol = getURNProtocol;
-/**
  * @alpha
  */
 (function (ChainId) {
     ChainId.schema = {
         type: 'number',
-        enum: Object.values(ChainId)
+        enum: Object.values(ChainId),
     };
-    ChainId.validate = (0, validation_1.generateValidator)(ChainId.schema);
+    ChainId.validate = validation_1.generateValidator(ChainId.schema);
 })(ChainId = exports.ChainId || (exports.ChainId = {}));
 //# sourceMappingURL=chain-id.js.map

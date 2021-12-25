@@ -7,7 +7,7 @@ import { generateValidator, JSONSchema, ValidateFunction } from '../validation'
 export enum Network {
   ETHEREUM = 'ETHEREUM',
   HARMONY = 'HARMONY',
-  MATIC = 'MATIC'
+  MATIC = 'MATIC',
 }
 
 /**
@@ -16,7 +16,7 @@ export enum Network {
 export namespace Network {
   export const schema: JSONSchema<Network> = {
     type: 'string',
-    enum: Object.values(Network)
+    enum: Object.values(Network),
   }
 
   export const validate: ValidateFunction<Network> = generateValidator(schema)
