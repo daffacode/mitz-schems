@@ -13,7 +13,6 @@
     "refresh-api": "npm run build && api-extractor run --local --verbose --diagnostics --typescript-compiler-folder ./node_modules/typescript"
   },
   "devDependencies": {
-    "@mitz/eslint-config": "git://github.com/daffacode/mitz-eslint-config.git",
     "@microsoft/api-extractor": "^7.18.19",
     "@types/mocha": "^8.2.0",
     "@types/node": "^14.14.25",
